@@ -268,6 +268,7 @@ int CVICALLBACK OnConnectManual (int panel, int control, int event, void *callba
 					SetCtrlAttribute(panelHandle,PANEL_CONNECT_MANUAL,ATTR_DIMMED,1);
 					SetCtrlAttribute(panelHandle,PANEL_UPDATE,ATTR_DIMMED,0);
 					SetCtrlAttribute(panelHandle,PANEL_DISCONNECT,ATTR_DIMMED,0);
+					SetCtrlAttribute(panelHandle,PANEL_SAVE_DATA,ATTR_DIMMED,0);
 				}
 				break;                                                  
 	 }                                                           
@@ -427,7 +428,7 @@ void CVICALLBACK DSCallback (DSHandle dsHandle, int event, void *pcallbackData)
 							SetCtrlAttribute(panelHandle,PANEL_CONNECT_MANUAL,ATTR_DIMMED,0);
 							SetCtrlAttribute(panelHandle,PANEL_UPDATE,ATTR_DIMMED,1);
 							SetCtrlAttribute(panelHandle,PANEL_DISCONNECT,ATTR_DIMMED,1);
-							SetCtrlAttribute(panelHandle,PANEL_SAVE_DATA,ATTR_DIMMED,0);
+							SetCtrlAttribute(panelHandle,PANEL_SAVE_DATA,ATTR_DIMMED,1);
 							
 							// save data
 							// make file pointer
@@ -470,6 +471,7 @@ int CVICALLBACK OnDisconnect (int panel, int control, int event, void *callbackD
 					SetCtrlAttribute(panelHandle,PANEL_CONNECT_MANUAL,ATTR_DIMMED,0);
 					SetCtrlAttribute(panelHandle,PANEL_UPDATE,ATTR_DIMMED,1);
 					SetCtrlAttribute(panelHandle,PANEL_DISCONNECT,ATTR_DIMMED,1);
+					SetCtrlAttribute(panelHandle,PANEL_SAVE_DATA,ATTR_DIMMED,1);
 				}
 				break;
 	 }
